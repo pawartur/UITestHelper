@@ -169,7 +169,7 @@ public extension XCUIElement {
     @discardableResult
     public func setSwitch(_ on: Bool, _ timeout: Int = 10) -> XCUIElement  {
         self.waitUntilExists(timeout)
-        if self.elementType == XCUIElementType.switch {
+        if self.elementType == XCUIElement.Type.switch {
             if  (!on && "\(self.value ?? "0")" == "1") || (on && "\(self.value ?? "0")" != "1") {
                 self.tap()
             }            
